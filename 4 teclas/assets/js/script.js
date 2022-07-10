@@ -1,11 +1,7 @@
 let color = "";
-let div1 = document.getElementById("div1");
-let div2 = document.getElementById("div2");
-let div3 = document.getElementById("div3");
-let div4 = document.getElementById("div4");
 
-let paint = function (event) {
-  this.style.backgroundColor = color;
+const paint = (e) => {
+  document.getElementById(e.target.id).style.backgroundColor = color;
 };
 
 document.addEventListener("keydown", function (event) {
@@ -18,7 +14,4 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-div1.addEventListener("click", paint);
-div2.addEventListener("click", paint);
-div3.addEventListener("click", paint);
-div4.addEventListener("click", paint);
+document.addEventListener("click", paint);
